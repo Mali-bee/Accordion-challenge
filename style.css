@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-image: url(/images/background-pattern-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(275, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 600px;
+    position: absolute;
+    top: 10%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    gap: 25px;
+    padding-top: 25px;
+    
+}
+.header h1 {
+    color: hsl(292, 42%, 14%);
+    font-size: 40px;
+}
+.header img {
+    width: 35px;
+}
+
+.accordion-block {
+    padding: 10px;
+}
+.accordion-heading {
+    font-weight: 400;
+    color: hsl(292, 42%, 14%);
+    padding: 20px 0;
+    border-top: 1px solid hsl(275, 100%, 97%);
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.accordion-heading:hover {
+    color: hsl(292, 16%, 49%);
+}
+.accordion-block.active .accordion-heading {
+    border-bottom: 0;
+}
+.accordion-heading:first-child {
+    border-top: 0;
+}
+.accordion-heading:nth-last-child() {
+    border-top: 0;
+}
+
+.accordion-block.active img{
+    
+}
+
+.accordion-content {
+    padding: 10px 0;
+    display: none;
+}
+
+.accordion-block.active .accordion-content {
+    display: block;
+}
+
+p {
+    font-size: 16px;
+    color: hsl(292, 16%, 49%);
+    line-height: 1.7;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    @media (max-width: 758px) {
+        
+        body {
+            background-image: url(./images/background-pattern-mobile.svg);
+        }
+
+        .container {
+            width: auto;
+            min-width: 300px;
+            margin: 2rem;
+            padding: 1rem;
+        }
+
+        .header h1{
+            font-size: 24px;
+        }
+
+        .accordion-heading h3{
+            font-size: 16px;
+        }
+        .accordion-content p {
+            font-size: 12px;
+        }
+    }
